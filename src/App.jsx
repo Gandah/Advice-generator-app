@@ -23,9 +23,8 @@ const App = () => {
         throw new Error("Network was not ok");
       }
       const data = await response.json();
-
-      setData(() => data.slip.advice);
-      // console.log(data);
+      setData(data.slip.advice);
+     
     } catch (err) {
       console.error("Error fetching advice:", err);
     }
@@ -37,18 +36,17 @@ const App = () => {
     getAdvice(randomId);
   };
 
-  //  console.log(data)
-  // if(!data) return null;
+  
   return (
-    <main className="relative flex flex-col justify-center items-center gap-10 p-6 min-w-[320px] w-[70%] max-w-[35rem] min-h-[450px]  text-white bg-grayishBlue/50 rounded-lg">
-      <div className="text-[0.75rem] text-neonGreen uppercase tracking-[.3em]">
+    <main className="relative flex flex-col justify-center items-center gap-6 p-6 min-w-[320px] w-[70%] max-w-[35rem] h-[fit-content]  text-white bg-grayishBlue/50 rounded-lg">
+      <div className="text-[0.75rem] text-neonGreen uppercase tracking-[.3em] p-4">
         <h3>Advice #{id}</h3>
       </div>
-      <div className="font-bold m-4 text-center text-[22px] md:text-[28px]">
-        <p>&#8220;{data}&#8220;</p>
+      <div className="font-bold p-2 text-center text-[22px] md:text-[28px]">
+        <p className="w-[fit-content]">&#8220;{data}&#8220;</p>
       </div>
       <div></div>
-      <div className="">
+      <div className="p-8">
         <img
           className="block max-w-full md:hidden"
           src={DividerMobile}
