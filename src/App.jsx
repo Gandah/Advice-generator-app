@@ -38,7 +38,7 @@ const App = () => {
 
   
   return (
-    <main className="relative flex flex-col justify-center items-center gap-6 p-6 min-w-[320px] w-[70%] max-w-[35rem] h-[fit-content]  text-white bg-grayishBlue/50 rounded-lg">
+    <main className="relative flex flex-col justify-center items-center gap-6 p-6 lg:px-12 min-w-[320px] w-[70%] max-w-[35rem] h-[fit-content]  text-white bg-grayishBlue/50 rounded-2xl">
       <div className="text-[0.75rem] text-neonGreen uppercase tracking-[.3em] p-4">
         <h3>Advice #{id}</h3>
       </div>
